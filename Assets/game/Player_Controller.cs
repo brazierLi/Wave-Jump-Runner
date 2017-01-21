@@ -48,7 +48,7 @@ public class Player_Controller : MonoBehaviour
         //jump With no AD/<> input
         else if (!HitGround && y < 0 && !Input.GetButton("Horizontal"))
         {
-            x *= 0.90f;
+            x *= 0.975f;
         }
         //Jump with AD/<> input
         else

@@ -9,9 +9,10 @@ public class MoveCloser : MonoBehaviour {
     public float RegularSpeed = 5,dist4OutOfRange = 15,outOfRange = 11, AddSpeed = 5;
     float currentAddSpeed = 0;
 
+    Camera c;
     private void Start()
     {
-        Camera c = GameObject.Find("Main Camera").GetComponent<Camera>();
+        c = GameObject.Find("Main Camera").GetComponent<Camera>();
         dist4OutOfRange = -c.ScreenToWorldPoint(new Vector3(0, 0)).x;   
     }
 
@@ -19,6 +20,8 @@ public class MoveCloser : MonoBehaviour {
     void FixedUpdate () {
         currentAddSpeed = 0f;
         Player = GameObject.Find("Player").GetComponent<Player_Controller>();
+        float dis = c.ScreenToWorldPoint(new Vector3(0, 0)).x - Player.gameObject.transform.position.x;
+        dist4OutOfRange = dis > 0 ? dis : -dis;
         if (Player.CurrentHitTag == MoveCloserTag)
         {
             currentAddSpeed += AddSpeed;
