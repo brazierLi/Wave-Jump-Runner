@@ -205,8 +205,6 @@ GameObject:
   - component: {fileID: 654761984}
   - component: {fileID: 654761983}
   - component: {fileID: 654761982}
-  - component: {fileID: 654761981}
-  - component: {fileID: 654761985}
   - component: {fileID: 654761987}
   - component: {fileID: 654761986}
   m_Layer: 0
@@ -216,20 +214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &654761981
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 654761980}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
 --- !u!23 &654761982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -281,17 +265,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &654761985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 654761980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85756d409b5eb454fb5597bb1fee3155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &654761986
 Rigidbody2D:
   serializedVersion: 4
@@ -306,7 +279,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -324,10 +297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveCloserTag: Damage
-  RegularSpeed: 5
+  RegularSpeed: 4
   dist4OutOfRange: 15
-  outOfRange: 11
-  AddSpeed: 5
+  outOfRange: 10
+  AddSpeed: 1
 --- !u!1 &1082177631
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3674187b6746f8479c805f5b047d826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedLimit: 4
+  SpeedLimit: 12
   SpeedJumpLimit: 0
   x: 0
   y: 0
