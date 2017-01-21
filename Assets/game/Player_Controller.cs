@@ -68,13 +68,12 @@ public class Player_Controller : MonoBehaviour
     }
 
     public Collision2D CurrentHit;
-    void OnCollisionStay2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         CurrentHit = col;
         HitGround = true;
         canJump = false;
         CurrentHitTag = col.gameObject.tag;
-            Debug.Log("3");
     }
     void OnCollisionExit2D(Collision2D col)
     {
